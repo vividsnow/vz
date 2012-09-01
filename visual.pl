@@ -42,18 +42,9 @@ gl_context(sub { # create gl context and pass drawing callback sub
     $sh->SetVector('time', AE::now - $started, $step++);
     $sh->SetVector('ctl', @ctl);
     $sh->SetMatrix('ctm', $oga);
-    glPushMatrix();
-        glScaled(6,6,1);
-        glTranslatef(-0.5,-0.5,-5);
-        glRectf(0,0,1,1); # draw normalized rectangle
-    glPopMatrix();
-    # glPushMatrix();
-    #     glScaled(($ctl[0]+1) x 2,1);
-    #     glRotatef(-$ctl[1]*180+90,0,0,1);
-    #     glTranslatef(-0.5,-0.5,-3);
-    #     glRectf(0,0,1,1); # draw normalized rectangle
-    # glPopMatrix();
-    #my $test = glReadPixels_p(0,0,800,600,GL_RGB,GL_UNSIGNED_BYTE);
+    glScaled(6,6,1);
+    glTranslatef(-0.5,-0.5,-5);
+    glRectf(0,0,1,1); # draw normalized rectangle
     $sh->Disable;
 });
 
