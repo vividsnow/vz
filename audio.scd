@@ -44,5 +44,5 @@ Ppar([
 		vz:Pfunc({ |e| { vz.sendMsg('ping', 2, e.dur, e.amp, e.freq, [e.factor].asString) }.defer(thisThread.clock.beatDur/16) }),
 		timingOffset: 1/16
 	])
-]).play(TempoClock(142/60), quant:[1])
+]).play(TempoClock(42/60), quant:[1])
 )
