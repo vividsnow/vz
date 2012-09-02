@@ -56,7 +56,7 @@ my $watch = AE::idle(sub {
 
 my $cond = AE::cv;
 $cond->cb(sub { undef $watch });
-$cond->recv;
+$cond->recv; # start event loop
 
 sub gl_context { # opengl boiler plate
     my $draw_callback = shift;
